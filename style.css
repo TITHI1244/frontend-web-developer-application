@@ -1,0 +1,28 @@
+.images{
+	width: 20vw;
+	height: 20vh;
+}
+.thumbnail {
+	padding: 20px;
+	line-height: 10px;
+}
+.thumbnail button{
+	margin: 20px;
+	padding: 10px;
+}
+li #showTheCart {
+	background-color: #ff0f42;
+	color: #003300;
+}
+li #showTheCart:hover{
+	background-color: #ff0f42;
+	color: lightgrey;
+}
+#theTable img{
+	width: 10vw;
+	height: 10vh;
+}
+button {
+	background-color: #009933;
+	color: white;
+}
