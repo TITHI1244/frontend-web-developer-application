@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>e-commerce store@SportCompass</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="Newscript.js"></script>
+</head>
+<body>
+<!--the header section-->
+<div class="container-fluid" id="companyInfo">
+   <div class="row">
+   	 <div class="col-sm-5">
+   	 	<img id="companyLogo" src="Logo.jpg" class="img-circle" alt="company-logo" width="100vw" height="100vh">
+   	 </div>
+   	 <div class="col-sm-7">
+   	 	<h1>SportCompass</h1>
+        <h4>The company</h4>
+   	 </div>   	
+   </div>
+</div>
+<!--the nav section-->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">SportCompass</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Who are we?</a></li>
+      <li><a href="#">What we do?</a></li>
+      <li><a href="#">How we do?</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a id="showTheCart" href="#myTbl" onclick="showTheTable()"><span class="glyphicon glyphicon-shopping-cart">0</span></a></li>
+    </ul>
+  </div>
+</nav>
+<!--the main item listing section-->
+<div class="container" id="mainContent">
+	<section>
+		<div class="col-sm-3">
+			<div class="thumbnail">
+				<h3 class="text-center">Item code: 001</h3> <hr>
+				<p>Some description goes here...</p>
+				<h4>Price: 1 Dkk/product</h4>
+				<img class="images" src="ProductImg.jpg" alt="img1">
+				<div class="text-right">
+					<button class="addBtn" value="001" onclick="btnClicked(value)">Add to my cart</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<div class="thumbnail">
+				<h3 class="text-center">Item code: 002</h3> <hr>
+				<p>Some description goes here...</p>
+				<h4>Price: 2 Dkk/product</h4>
+				<img class="images" src="ProductImg.jpg" alt="img2">
+				<div class="text-right">
+					<button class="addBtn" value="002" onclick="btnClicked(value)">Add to my cart</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<div class="thumbnail">
+				<h3 class="text-center">Item code: 003</h3> <hr>
+				<p>Some description goes here...</p>
+				<h4>Price: 3 Dkk/product</h4>
+				<img class="images" src="ProductImg.jpg" alt="img3">
+				<div class="text-right">
+					<button class="addBtn" value="003" onclick="btnClicked(value)">Add to my cart</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<div class="thumbnail">
+				<h3 class="text-center">Item code: 004</h3> <hr>
+				<p>Some description goes here...</p>
+				<h4>Price: 4 Dkk/product</h4>
+				<img class="images" src="ProductImg.jpg" alt="img4">
+				<div class="text-right">
+					<button class="addBtn" value="004" onclick="btnClicked(value)">Add to my cart</button>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+<!--the invisible table section to check out all the products-->
+<div class="container" id="theTable" style="display: none;">
+  <h2>Purchase summary</h2>
+  <p>You can add or edit more items here:</p>            
+  <table id="myTbl" class="table table-responsive">
+    <thead>
+      <tr>
+        <th>Item code</th>
+        <th>Image</th>
+        <th>No of items</th>
+        <th>Edit items</th>
+        <th>Cost per item(Dkk)</th>
+        <th>Total cost for this item(Dkk)</th>
+        <th>Add or remove items</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+      	
+    </tbody>
+    <tfoot>
+    <tr style="background-color: lightblue;">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Total cost(Dkk):</td>
+      <td id="totalCostOfAll"></td>
+      <td></td>
+    </tr>
+  </tfoot>
+  </table>
+
+	<!--the check out section-->
+	<div id="checkOutBtn" class="text-right">
+	<button class="btn btn-primary btn-lg btn-success">Check out &amp; Pay</button>
+	</div>
+</div>	
+<div class="jumbotron text-center">
+	<p>
+		Contact Info.....
+	</p>
+</div>
+
+</body>
+</html>
+
